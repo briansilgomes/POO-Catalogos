@@ -11,6 +11,8 @@ namespace POO_Catalogos
         
         public string siteFornecedor { get; set; }
 
+        public CatalogoFornecedor() { }
+
         public override int TotalCatalogo()
         {
             throw new NotImplementedException();

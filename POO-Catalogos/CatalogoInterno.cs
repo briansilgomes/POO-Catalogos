@@ -9,12 +9,18 @@ namespace POO_Catalogos
     public class CatalogoInterno : Catalogo, ICatalogoInterno
     {
 
-        int total = 0; 
+        private int total;
+            
+
+        public CatalogoInterno()
+        {
+            this.total = 0;
+        }
+
         public void InserirCatalogo(CatalogoInterno catalogo)
         {
             Console.WriteLine($"Inseriu o catálogo ({catalogo.nomeCatalogo}) com sucesso!");
         }
-
 
         public override int TotalCatalogo()
         {
