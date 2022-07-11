@@ -8,6 +8,7 @@ namespace POO_Catalogos
 {
     public interface ICatalogoInterno
     {
-        void InserirCatalogo(CatalogoInterno catalogo);
+        CatalogoInterno InserirCatalogo(CatalogoInterno catalogo);
+        List<CatalogoInterno> CatalogoInternoList();
     }
 }

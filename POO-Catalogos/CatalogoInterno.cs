@@ -9,22 +9,41 @@ namespace POO_Catalogos
     public class CatalogoInterno : Catalogo, ICatalogoInterno
     {
 
-        private int total;
-            
-
-        public CatalogoInterno()
+        public CatalogoInterno(int codigoCatalogo, string nomeCatalogo, string tipoCatalogo, DateTime dataModificacao, string caminhoFicheiro, string caminhoImagem)
         {
-            this.total = 0;
+            this.codigoCatalogo = codigoCatalogo;
+            this.nomeCatalogo = nomeCatalogo;
+            this.tipoCatalogo= tipoCatalogo;
+            this.dataModificacao = dataModificacao;
+            this.caminhoFicheiro = caminhoFicheiro;
+            this.caminhoImagem = caminhoImagem;
         }
 
-        public void InserirCatalogo(CatalogoInterno catalogo)
+        public List<CatalogoInterno> CatalogoInternoList()
         {
-            Console.WriteLine($"Inseriu o catálogo ({catalogo.nomeCatalogo}) com sucesso!");
+            var catalogos = new List<CatalogoInterno>()
+           {
+                new CatalogoInterno(150,"Máquinas","Interno",DateTime.Now,"C:","C:"),
+                new CatalogoInterno(200,"Carrinhos","Interno",DateTime.Now,"C:","C:")
+
+           };
+
+            catalogos.ForEach(cat => Console.WriteLine(cat.nomeCatalogo));
+
+            return catalogos;
+                    
+        }
+
+        public CatalogoInterno InserirCatalogo(CatalogoInterno catalogo)
+        {
+           Console.WriteLine($"Inseriu o catálogo ({catalogo.nomeCatalogo}) com sucesso!");
+           return catalogo;
         }
 
         public override int TotalCatalogo()
         {
-            return this.total +1 ;
+            int total = 0;
+            return total +1 ;
         }
 
         public override bool VerificarCatalogo(string nomecatalogo)
@@ -32,5 +51,7 @@ namespace POO_Catalogos
             if (nomecatalogo == null) { return false; }
             return true;
         }
+
+       
     }
 }

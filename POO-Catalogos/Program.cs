@@ -10,13 +10,15 @@ namespace POO_Catalogos
     {
         static void Main(string[] args)
         {
-           
-            CatalogoInterno catalogoInterno = new CatalogoInterno();
-            catalogoInterno.nomeCatalogo = "147 - Tubos";
 
+            CatalogoInterno catalogoInterno = new CatalogoInterno(147,"Tubos","Interno",DateTime.Now,"file.txt","image.png");
+         
             if (catalogoInterno.VerificarCatalogo(catalogoInterno.nomeCatalogo) == true) catalogoInterno.InserirCatalogo(catalogoInterno);
             
-            Console.WriteLine(catalogoInterno.TotalCatalogo());
+            Console.WriteLine($"Total: {catalogoInterno.TotalCatalogo()}");
+
+            catalogoInterno.CatalogoInternoList();
+
             Console.ReadKey();
    
         }
