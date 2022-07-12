@@ -46,10 +46,11 @@
     <Compile Include="Catalogo.cs" />
     <Compile Include="CatalogoFornecedor.cs" />
     <Compile Include="CatalogoInterno.cs" />
-    <Compile Include="ICatalogoInterno.cs" />
+    <Compile Include="Interface\ICatalogoInterno.cs" />
+    <Compile Include="Interface\ITipoProduto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoProduto.cs" />
+    <Compile Include="TipoCatalogo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,7 +10,7 @@ namespace POO_Catalogos
     {
         public int codigoCatalogo { get; set; }
         public string nomeCatalogo { get; set; }
-        public string tipoCatalogo { get; set; }
+        public int tipoCatalogo { get; set; }
         public DateTime dataModificacao { get; set; }
         public string caminhoFicheiro { get; set; }
         public string caminhoImagem { get; set; }
