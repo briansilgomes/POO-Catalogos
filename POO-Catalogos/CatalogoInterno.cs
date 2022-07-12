@@ -24,6 +24,7 @@ namespace POO_Catalogos
 
         }
 
+        //List - catalogos internos
         public List<CatalogoInterno> CatalogoInternoList()
         {
 
@@ -37,17 +38,20 @@ namespace POO_Catalogos
          
         }
 
+        //Insert - catalogos internos
         public CatalogoInterno InserirCatalogo(CatalogoInterno catalogo)
         {
             Console.WriteLine($"Inseriu o catálogo ({catalogo.nomeCatalogo}) com sucesso!");
             return catalogo;
         }
 
+        //Total - catalogos internos
         public override int TotalCatalogo()
         {
             return CatalogoInternoList().Count;
         }
 
+        //Verifica se já existe - catalogos internos
         public override bool VerificarCatalogo(string nomecatalogo)
         {
             if (nomecatalogo == "Carrinhos") { return true; }
