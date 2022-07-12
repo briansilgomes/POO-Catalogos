@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace POO_Catalogos
 {
-    internal interface ITipoProduto
+    internal interface ITipoCatalogo
     {
-        string GetTipoProduto(int idproduto);
-        List<TipoCatalogo> GetTiposProdutoList();
+        string GetTipoCatalogo(int idproduto);
+        List<TipoCatalogo> GetTiposCatalogoList();
     }
 }

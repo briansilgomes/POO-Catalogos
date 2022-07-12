@@ -22,7 +22,7 @@ namespace POO_Catalogos
             //Verifica tipo de catalogo é válido
 
             TipoCatalogo tipoCatalog = new TipoCatalogo();
-            string tipoCatalogo = tipoCatalog.GetTipoProduto(catalogoInterno.tipoCatalogo);
+            string tipoCatalogo = tipoCatalog.GetTipoCatalogo(catalogoInterno.tipoCatalogo);
             if (tipoCatalogo == null) Console.WriteLine("Tipo de Catalogo não existe!");
 
             //Verifica nome do catálogo já existe

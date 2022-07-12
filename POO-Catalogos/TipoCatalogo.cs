@@ -6,32 +6,34 @@ using System.Threading.Tasks;
 
 namespace POO_Catalogos
 {
-    public class TipoCatalogo: ITipoProduto
+    public class TipoCatalogo: ITipoCatalogo
     {
-        private int idproduto { get; set; }
-        private string tipoProduto { get; set; }
+        private int idTipoCatalogo { get; set; }
+        private string tipoCatalogo { get; set; }
 
 
         public TipoCatalogo() {
-            this.GetTiposProdutoList();
+            this.GetTiposCatalogoList();
         }
 
         public TipoCatalogo(int idproduto, string tipoProduto)
         {
-            this.idproduto = idproduto;
-            this.tipoProduto = tipoProduto;
+            this.idTipoCatalogo = idproduto;
+            this.tipoCatalogo = tipoProduto;
         }
 
-        public string GetTipoProduto(int idproduto)
+        //Get tipo de catálogo por ID 
+        public string GetTipoCatalogo(int idproduto)
         {
-            var result = (from tipo in GetTiposProdutoList()
-                          where tipo.idproduto == idproduto
-                         select tipo.tipoProduto).FirstOrDefault();
+            var result = (from tipo in GetTiposCatalogoList()
+                          where tipo.idTipoCatalogo == idproduto
+                         select tipo.tipoCatalogo).FirstOrDefault();
 
             return result; 
         }
 
-        public List<TipoCatalogo> GetTiposProdutoList()
+        //Lista tipo de catálogos
+        public List<TipoCatalogo> GetTiposCatalogoList()
         {
           List<TipoCatalogo> tiposProdutoList = new List<TipoCatalogo>()
             {
